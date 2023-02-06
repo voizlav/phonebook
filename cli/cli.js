@@ -53,3 +53,12 @@ const Peeps = mongoose.model(
     number: String,
   })
 );
+
+/* List the entire phonebook */
+if (process.argv.length === 3) {
+  Peeps.find().then((result) => {
+    console.log("Phonebook:");
+    result.forEach((person) => console.log(`${person.name} ${person.number}`));
+    mongoose.connection.close();
+  });
+}
