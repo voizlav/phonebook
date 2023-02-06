@@ -1,0 +1,11 @@
+{
+  "name": "phonebook-cli",
+  "version": "1.0.0",
+  "description": "Command line interface for phonebook",
+  "main": "cli.js",
+  "scripts": {
+    "cli": "node cli.js"
+  },
+  "author": "Vojislav Trujkic",
+  "license": "MIT"
+}
