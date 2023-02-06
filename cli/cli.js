@@ -39,7 +39,7 @@ if (!process.env.DATABASE_URI) {
 /* Configure mongodb and connect */
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.URI.replace(/password/g, process.argv[2]))
+  .connect(process.env.DATABASE_URI.replace(/password/g, process.argv[2]))
   .catch((error) =>
     console.error("Failure in establishing a connection to MongoDB")
   );
