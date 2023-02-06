@@ -35,3 +35,11 @@ if (!process.env.DATABASE_URI) {
   console.error("A database URI must be provided in ENV");
   process.exit(1);
 }
+
+/* Configure mongodb and connect */
+mongoose.set("strictQuery", false);
+mongoose
+  .connect(process.env.URI.replace(/password/g, process.argv[2]))
+  .catch((error) =>
+    console.error("Failure in establishing a connection to MongoDB")
+  );
