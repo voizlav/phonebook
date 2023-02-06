@@ -43,3 +43,13 @@ mongoose
   .catch((error) =>
     console.error("Failure in establishing a connection to MongoDB")
   );
+
+/* Model collection */
+const Peeps = mongoose.model(
+  "Peeps",
+  new mongoose.Schema({
+    id: String,
+    name: String,
+    number: String,
+  })
+);
