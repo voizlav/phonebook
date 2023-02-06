@@ -9,6 +9,7 @@
   "author": "Vojislav Trujkic",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mongoose": "^6.9.0"
   }
 }
