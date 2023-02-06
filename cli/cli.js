@@ -61,4 +61,15 @@ if (process.argv.length === 3) {
     result.forEach((person) => console.log(`${person.name} ${person.number}`));
     mongoose.connection.close();
   });
+} else {
+  /* Create new person in phonebook */
+  new Peeps({
+    name: process.argv[3],
+    number: process.argv[4],
+  })
+    .save()
+    .then((result) => {
+      console.log(`Added ${result.name} number ${result.number} to phonebook`);
+      mongoose.connection.close();
+    });
 }
