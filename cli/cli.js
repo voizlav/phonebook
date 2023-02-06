@@ -29,3 +29,9 @@ if (process.argv.length === 5) {
     process.exit(1);
   }
 }
+
+/* Check if the connection string is present */
+if (!process.env.DATABASE_URI) {
+  console.error("A database URI must be provided in ENV");
+  process.exit(1);
+}
